@@ -1,0 +1,2 @@
+# typeScriptPracticing
+TypeScript studying
