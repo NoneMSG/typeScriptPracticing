@@ -1,20 +1,30 @@
-interface Human {
-    name : string;
-    age : number;
-    gender : string;
+class Human{
+    public name:string;
+    private age :number;
+    public gender:string;
+    /*
+    constructor(name:string, age:number, gender?:string){
+        this.name   = name;
+        this.age    = age;
+        this.gender = gender;
+    }*/
+    getAge(){
+        return this.age;
+    }
+    setAge(age:number){
+        this.age = age;
+    }
 }
 
-const person ={
-    name : "moon",
-    age : 31,
-    gender : 'male'
-};
-
+const moon = new Human();
+moon.name="moon";
+moon.gender="male";
+moon.setAge(18);
 const sayHi = (person : Human):string =>{
-    return `Hello ${person.name}. you are ${person.age}, you are a ${person.gender}!!`;
+    return `Hello ${person.name}. you are ${person.getAge()}, you are a ${person.gender}!!`;
 };
     
-console.log(sayHi(person));
+console.log(sayHi(moon));
  
 export {};
 
